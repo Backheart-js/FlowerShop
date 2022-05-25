@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Custom class */
+.custom-subtitle {
+    @apply text-primary text-3xl font-normal uppercase;
+}
+
+.custom-item-desc {
+    @apply uppercase font-bold text-primary text-xl;
+}
+
+.custom-index-title {
+    @apply uppercase font-bold text-primary text-2xl;
+}

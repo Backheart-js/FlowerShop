@@ -1,13 +1,465 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="../dist/output.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="../dist/output.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../src/input.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
-  <h1 class="text-3xl font-bold underline">
-    Hello world! My name is Binh
-  </h1>
+  <header id="header" class="h-[100px]">
+    <div class="container mx-auto h-full flex items-center 2xl:w-[85%]">
+      <div class="header__menu block lg:hidden">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+      <div class="header__logo w-[120px]">
+        <img src="../src/img/Group.png" alt="" class="header__logo-img w-full" />
+      </div>
+      <div class="header__category hidden lg:block">
+        <ul class="header__category-list flex">
+          <li class="header__category-item">Trang chủ</li>
+          <li class="header__category-item">Sản phẩm</li>
+          <li class="header__category-item">Ưu đãi</li>
+          <li class="header__category-item">Khóa học</li>
+          <li class="header__category-item">Giới thiệu</li>
+          <li class="header__category-item">Blog</li>
+          <li class="header__category-item">Liên hệ</li>
+        </ul>
+      </div>
+      <div class="header__function">
+        <ul class="header__function-list flex">
+          <li class="header__function-list">
+            <span class=""> 0 </span>
+          </li>
+          <li class="header__function-list">
+            <i class="fa-solid fa-cart-shopping"></i>
+          </li>
+          <li class="header__function-list">
+            <i class="fa-solid fa-user"></i>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  
+  <main id="content">
+    <div id="indicators-carousel " class="relative content__carousel" data-carousel="static">
+      <div class="overflow-hidden relative h-48 rounded-lg sm:h-64 xl:h-80 2xl:h-96">
+        <div class="duration-700 ease-in-out absolute inset-0 transition-all transform translate-x-0 z-20"
+          data-carousel-item="active">
+          <img src="../src/img/Rectangle 1.png"
+            class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="..." />
+        </div>
+
+        <div class="duration-700 ease-in-out absolute inset-0 transition-all transform translate-x-full z-10"
+          data-carousel-item="">
+          <img src="../src/img/Rectangle 1.png"
+            class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="..." />
+        </div>
+
+        <div class="hidden duration-700 ease-in-out absolute inset-0 transition-all transform" data-carousel-item="">
+          <img src="../src/img/Rectangle 1.png"
+            class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="..." />
+        </div>
+
+        <div class="hidden duration-700 ease-in-out absolute inset-0 transition-all transform" data-carousel-item="">
+          <img src="../src/img/Rectangle 1.png"
+            class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="..." />
+        </div>
+
+        <div class="duration-700 ease-in-out absolute inset-0 transition-all transform -translate-x-full z-10"
+          data-carousel-item="">
+          <img src="../src/img/Rectangle 1.png"
+            class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="..." />
+        </div>
+      </div>
+
+      <div class="flex absolute bottom-5 left-1/2 z-30 space-x-3 -translate-x-1/2">
+        <button type="button" class="w-3 h-3 rounded-full bg-white dark:bg-gray-800" aria-current="true"
+          aria-label="Slide 1" data-carousel-slide-to="0"></button>
+        <button type="button"
+          class="w-3 h-3 rounded-full bg-white/50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800"
+          aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+        <button type="button"
+          class="w-3 h-3 rounded-full bg-white/50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800"
+          aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+        <button type="button"
+          class="w-3 h-3 rounded-full bg-white/50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800"
+          aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
+        <button type="button"
+          class="w-3 h-3 rounded-full bg-white/50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800"
+          aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
+      </div>
+    </div>
+
+    <div class="content__filter-wrapper mb-10">
+      <ul class="content__filter-list container mx-auto 2xl:w-[85%]">
+        <li class="content__filter-item">
+          <select name="" id="" class="filter__select">
+            <option value="">Kiểu dáng</option>
+          </select>
+        </li>
+        <li class="content__filter-item">
+          <select name="" id="" class="filter__select">
+            <option value="">Kích cỡ</option>
+          </select>
+        </li>
+        <li class="content__filter-item">
+          <select name="" id="" class="filter__select">
+            <option value="">Màu sắc</option>
+          </select>
+        </li>
+        <li class="content__filter-item">
+          <select name="" id="" class="filter__select">
+            <option value="">Giá</option>
+          </select>
+        </li>
+        <li class="content__filter-item">
+          <select name="" id="" class="filter__select">
+            <option value="">Đối tượng tặng</option>
+          </select>
+        </li>
+        <li class="content__filter-item">
+          <button type="button" class="btn">Tìm kiếm</button>
+        </li>
+      </ul>
+    </div>
+    <hr class="mb-14">
+
+    <div class="content__colection text-center container mx-auto 2xl:w-[85%] mb-14">
+      <span class="custom-subtitle">Bộ sưu tập</span>
+      <div class="content__colection-wrapper grid grid-cols-4 gap-6">
+        <div class="content__colection-item">
+          <img src="../src/img/Rectangle 34.png" alt="" class="content__colection-img w-full">
+          <span class="custom-item-desc">Hoa ngày Doanh nhân VN 13/10</span>
+        </div>
+        <div class="content__colection-item">
+          <img src="../src/img/Rectangle 34-2.png" alt="" class="content__colection-img w-full">
+          <span class="custom-item-desc">Hoa ngày 08/03</span>
+        </div>
+        <div class="content__colection-item">
+          <img src="../src/img/Rectangle 34-1.png" alt="" class="content__colection-img w-full">
+          <span class="custom-item-desc">hoa khô nhập khẩu</span>
+        </div>
+        <div class="content__colection-item">
+          <img src="../src/img/Rectangle 34-2.png" alt="" class="content__colection-img w-full">
+          <span class="custom-item-desc">Hoa ngày Doanh nhân VN 13/10</span>
+        </div>
+      </div>
+      <br>
+      <br>
+
+      <div class="content__colection-index flex w-[50%] mx-auto justify-around mt-20">
+        <span class="custom-index-title">Mới nhất</span>
+        <span class="custom-index-title underline">Best seller</span>
+        <span class="custom-index-title">Ưu đãi</span>
+      </div>
+      <div class="content__colection-wrapper grid grid-cols-5 gap-x-5 gap-y-10 container mx-auto">
+        <div class="content__colection-item">
+          <img src="../src/img/Rectangle 4.png" alt="" class="content__colection-img w-full">
+          <span class="custom-index-title">the wild</span>
+          <span class="custom-index-price">120.000 đ</span>
+        </div>
+        <div class="content__colection-item">
+          <img src="../src/img/Rectangle 4-2.png" alt="" class="content__colection-img w-full">
+          <span class="custom-index-title">the wild</span>
+          <span class="custom-index-price">120.000 đ</span>
+        </div>
+        <div class="content__colection-item">
+          <img src="../src/img/Rectangle 4-3.png" alt="" class="content__colection-img w-full">
+          <span class="custom-index-title">the wild</span>
+          <span class="custom-index-price">120.000 đ</span>
+        </div>
+        <div class="content__colection-item">
+          <img src="../src/img/Rectangle 4-4.png" alt="" class="content__colection-img w-full">
+          <span class="custom-index-title">the wild</span>
+          <span class="custom-index-price">120.000 đ</span>
+        </div>
+        <div class="content__colection-item">
+          <img src="../src/img/Rectangle 24.png" alt="" class="content__colection-img w-full">
+          <span class="custom-index-title">the wild</span>
+          <span class="custom-index-price">120.000 đ</span>
+        </div>
+        <div class="content__colection-item">
+          <img src="../src/img/Rectangle 4.png" alt="" class="content__colection-img w-full">
+          <span class="custom-index-title">the wild</span>
+          <span class="custom-index-price">120.000 đ</span>
+        </div>
+        <div class="content__colection-item">
+          <img src="../src/img/Rectangle 4-2.png" alt="" class="content__colection-img w-full">
+          <span class="custom-index-title">the wild</span>
+          <span class="custom-index-price">120.000 đ</span>
+        </div>
+        <div class="content__colection-item">
+          <img src="../src/img/Rectangle 4-3.png" alt="" class="content__colection-img w-full">
+          <span class="custom-index-title">the wild</span>
+          <span class="custom-index-price">120.000 đ</span>
+        </div>
+        <div class="content__colection-item">
+          <img src="../src/img/Rectangle 4-4.png" alt="" class="content__colection-img w-full">
+          <span class="custom-index-title">the wild</span>
+          <span class="custom-index-price">120.000 đ</span>
+        </div>
+        <div class="content__colection-item">
+          <img src="../src/img/Rectangle 24.png" alt="" class="content__colection-img w-full">
+          <span class="custom-index-title">the wild</span>
+          <span class="custom-index-price">120.000 đ</span>
+        </div>
+      </div>
+
+      <span class="text-primary text-sm underline font-normal">Xem thêm</span>
+    </div>
+
+    <div class="content__about text-center container mx-auto">
+      <span class="custom-subtitle">về liti florist</span>
+      <div class="content__about-wrapper-full flex justify-end">
+        <div class="content__about-wrapper w-[90%] flex">
+          <div class="content__about-desc w-[35%]">
+            <span>
+              Liti Florist được thành lập từ năm 2012, luôn tiên phong các xu
+              hướng hoa tươi nhập khẩu hiện đại. Với hệ thống nhà cung cấp
+              hàng đầu từ khắp nơi trên thế giới, các nhà thiết kế hoa kỹ thuật
+              cao giàu kinh nghiệm, chứa đựng cảm xúc trong từng sản phẩm,
+              Liti Florist tự hào đã làm hài lòng hàng trăm ngàn khách hàng
+              khắp Việt Nam.
+            </span>
+            <span>
+              Sứ mệnh của chúng tôi là đảm bảo 100% khách hàng hài lòng
+              khi sử dụng dịch vụ của Liti Florist... <span class="text-primary text-base underline italic font-normal">xem thêm</span>
+            </span>
+          </div>
+          <div class="content__about-slide flex overflow-x-scroll">
+            <img src="../src/img/Rectangle 33.png" alt="" class="w-[370px] mr-5">
+            <img src="../src/img/Rectangle 36.png" alt="" class="w-[370px] mr-5">
+            <img src="../src/img/Rectangle 33.png" alt="" class="w-[370px] mr-5">
+            <img src="../src/img/Rectangle 36.png" alt="" class="w-[370px] mr-5">
+            <img src="../src/img/Rectangle 33.png" alt="" class="w-[370px] mr-5">
+            <img src="../src/img/Rectangle 36.png" alt="" class="w-[370px] mr-5">
+          </div>
+        </div>
+      </div>
+      <div class="content__about-social">
+        <i class="fa-brands fa-facebook-square"></i>
+        <i class="fa-brands fa-instagram-square"></i>
+        <i class="fa-brands fa-youtube"></i>
+      </div>
+    </div>
+
+    <div class="content__newspapers grid grid-cols-2 gap-4">
+      <div class="newspapers__interview w-[70%] mx-auto">
+        <div class="newspapers__interview-wrapper flex justify-between">
+          <img src="../src/img/Ellipse 4.png" alt="">
+          <span>
+            Lorem ipsum dolor sit amet, consectetur adipiscing
+            elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute ...
+          </span>
+        </div>
+        <div class="newspapers__interview">
+          <button type="button" class="w-3 h-3 rounded-full bg-stone-500 hover:bg-stone-800"></button>
+          <button type="button" class="w-3 h-3 rounded-full bg-stone-500 hover:bg-stone-800"></button>
+          <button type="button" class="w-3 h-3 rounded-full bg-stone-500 hover:bg-stone-800"></button>
+          <button type="button" class="w-3 h-3 rounded-full bg-stone-500 hover:bg-stone-800"></button>
+          <button type="button" class="w-3 h-3 rounded-full bg-stone-500 hover:bg-stone-800"></button>
+          <button type="button" class="w-3 h-3 rounded-full bg-stone-500 hover:bg-stone-800"></button>
+        </div>
+      </div>
+      <div class="newspapers__brand-wrapper text-center">
+        <span class="custom-subtitle">Báo chí nói về chúng tôi</span>
+        <div class="newspapers__logo-wrapper flex overflow-x-scroll">
+          <img src="../src/img/image 5.png" alt="" class="w-[250px] mr-10">
+          <img src="../src/img/image 6.png" alt="" class="w-[250px] mr-10">
+          <img src="../src/img/image 7.png" alt="" class="w-[250px] mr-10">
+          <img src="../src/img/image 5.png" alt="" class="w-[250px] mr-10">
+          <img src="../src/img/image 6.png" alt="" class="w-[250px] mr-10">
+          <img src="../src/img/image 7.png" alt="" class="w-[250px] mr-10">
+        </div>
+      </div>
+    </div>
+
+    <div class="content__contact bg-[#8b4513e6] mb-14">
+      <div class="content__contact-wrapper container mx-auto w-[50%] text-center">
+        <span class="text-3xl text-white font-normal">
+          Nhận ngay tư vấn của chúng tôi
+        </span>
+        <span class="w-[60%] text-white opacity-70">
+          Vui lòng để lại thông tin chúng tôi sẽ liên hệ với bạn trong thời gian gần nhất
+        </span>
+        <div class="contact__input-wrapper grid grid-cols-2 grid-rows-3 gap-x-5 gap-y-3">
+          <input type="text" class="contact-input bg-transparent rounded-md text-white border-white" placeholder="Họ tên">
+          <input type="text" class="contact-input bg-transparent rounded-md text-white border-white" placeholder="Số điện thoại hoặc email">
+          <input type="text" class="contact-input bg-transparent rounded-md text-white border-white row-span-2 col-span-2" placeholder="Để lại lời nhắn">
+        </div>
+        <input type="submit" class="btn bg-white text-primary px-20 py-1 rounded hover:cursor-pointer hover:bg-slate-100" value="Gửi đi">
+      </div>
+    </div>
+
+    <div class="content__event container mx-auto 2xl:w-[85%]">
+      <span class="custom-subtitle">Sự kiện</span>
+      <div class="content__event-grid grid grid-rows-6 grid-cols-2 mt-10 gap-x-6">
+        <div class="content__mainevent-wrapper row-span-5 flex flex-col ">
+          <img src="../src/img/Rectangle 16.png" alt="">
+          <span class="custom-news-title">
+            Người tôn vinh nét văn hiến Thăng Long - Hà Nội
+          </span>
+          <span>
+            Cũng giống như bao người yêu Hà Nội, nhà báo Vũ Thị Tuyết Nhung, nguyên
+            Trưởng Ban biên tập Văn hóa - xã hội, Đài Phát thanh và Truyền hình Hà Nội
+            luôn luôn ấp ủ một tình yêu vô bờ với mảnh đất mình sinh ra và lớn lên...
+          </span>
+        </div>
+
+        <div class="content__subevent grid grid-rows-6 grid-cols-2 row-span-6 gap-x-6">
+          <div class="content__event-wrapper row-span-3">
+            <img src="../src/img/Rectangle 17.png" alt="" class="w-full">
+            <span class="custom-news-title">
+              Vẻ đẹp phụ nữ Hà Nhì qua
+              ống kính Nghệ sỹ nhiếp ảnh
+              Nguyễn Hải Huy
+            </span>
+          </div>
+          <div class="content__event-wrapper row-span-3">
+            <img src="../src/img/Rectangle 18.png" alt="" class="w-full">
+            <span class="custom-news-title">
+              Vẻ đẹp phụ nữ Hà Nhì qua
+              ống kính Nghệ sỹ nhiếp ảnh
+              Nguyễn Hải Huy
+            </span>
+            
+          </div>
+          <div class="content__event-wrapper row-span-3">
+            <img src="../src/img/Rectangle 19.png" alt="" class="w-full">
+            <span class="custom-news-title">
+              Vẻ đẹp phụ nữ Hà Nhì qua
+              ống kính Nghệ sỹ nhiếp ảnh
+              Nguyễn Hải Huy
+            </span>
+            
+          </div>
+          <div class="content__event-wrapper row-span-3">
+            <img src="../src/img/Rectangle 20.png" alt="" class="w-full">
+            <span class="custom-news-title">
+              Vẻ đẹp phụ nữ Hà Nhì qua
+              ống kính Nghệ sỹ nhiếp ảnh
+              Nguyễn Hải Huy
+            </span>
+            
+          </div>
+        </div>
+      </div>
+      <span class="text-primary text-sm underline font-normal mt-10">Xem thêm</span>
+    </div>
+
+  </main>
+
+  <footer id="footer" class="mt-14">
+    <div class="grid grid-cols-4 grid-rows-5 container mx-auto 2xl:w-[85%] gap-x-10">
+      <div class="footer__wrapper row-span-2">
+        <img src="../src/img/Group.png" alt="">
+      </div>
+      <div class="footer__wrapper row-span-3 col-start-1 row-start-3">
+        <span class="custom-footer-title">
+          CÔNG TY CỔ PHẦN HOA LITI
+        </span>
+        <ul class="footer__info-list">
+          <li class="footer__info-item">
+            <span class="font-bold">Số điện thoại: </span>02435766338
+          </li>
+          <li class="footer__info-item">
+            <span class="font-bold">Email: </span>info@litiflorist.com - liti.florist@gmail.com
+          </li>
+          <li class="footer__info-item">
+            <span class="font-bold">Mã số thuế: </span>0106256523
+          </li>
+          <li class="footer__info-item">
+            <span class="font-bold">Ngày cấp: </span>06/08/2013
+          </li>
+          <li class="footer__info-item">
+            <span class="font-bold">Địa chỉ: </span>Nhà A4, khu X1, ngõ 17 Hoàng Ngọc Phách, Láng Hạ, Đống Đa, Hà Nội.
+          </li>
+        </ul>
+      </div>
+      <div class="footer__wrapper row-span-3 col-span-2 col-start-2 row-start-2 lg:ml-10">
+        <span class="custom-footer-title">
+          HỆ THỐNG CỬA HÀNG
+        </span>
+        <ul class="footer__info-list">
+          <li class="footer__info-item">
+            <span class="font-bold">CS1: </span>3 Phố Huế, Hà Nội - 0964.31.33.55 | 02435766338
+          </li>
+          <li class="footer__info-item">
+            <span class="font-bold">CS2: </span>339 Kim Mã, Ba Đình, Hà Nội - 0964.26.33.55
+          </li>
+          <li class="footer__info-item">
+            <span class="font-bold">CS3: </span>51 Trần Duy Hưng, Hà Nội - 0971.65.11.55 | 02435766338
+          </li>
+          <li class="footer__info-item">
+            <span class="font-bold">CS4: </span>100 Võ Thị Sáu, Hồ Chí Minh - 0971.84.11.55 | 02435766338
+          </li>
+          <li class="footer__info-item">
+            <span class="font-bold">CS5: </span>TTTM Lotte 54 Liễu Giai - 0984031155
+          </li>
+        </ul>
+      </div>
+      <div class="footer__wrapper row-span-5 col-start-4 row-start-2">
+        <span class="custom-footer-title">
+          QUY ĐỊNH & CHÍNH SÁCH
+        </span>
+        <ul class="footer__info-list">
+          <li class="footer__info-item">
+            <a href="" class="footer__info-link text-gray-500 hover:text-gray-800">
+              Quy định và bảo mật
+            </a>  
+          </li>
+          <li class="footer__info-item">
+            <a href="" class="footer__info-link text-gray-500 hover:text-gray-800">
+              Chính sách và qui định chung
+            </a>  
+          </li>
+          <li class="footer__info-item">
+            <a href="" class="footer__info-link text-gray-500 hover:text-gray-800">
+              Bảo mật thông tin
+            </a>  
+          </li>
+          <li class="footer__info-item">
+            <a href="" class="footer__info-link text-gray-500 hover:text-gray-800">
+              Chính sách mua hàng
+            </a>  
+          </li>
+          <li class="footer__info-item">
+            <a href="" class="footer__info-link text-gray-500 hover:text-gray-800">
+              Quy định và hình thức thanh toán
+            </a>  
+          </li>
+          <li class="footer__info-item">
+            <a href="" class="footer__info-link text-gray-500 hover:text-gray-800">
+              Vận chuyển / giao nhận
+            </a>  
+          </li>
+          <li class="footer__info-item">
+            <a href="" class="footer__info-link text-gray-500 hover:text-gray-800">
+              Đổi trả hàng và hoàn tiền
+            </a>  
+          </li>
+          <li class="footer__info-item">
+            <a href="" class="footer__info-link text-gray-500 hover:text-gray-800">
+              Chính sách thẻ hội viên
+            </a>  
+          </li>
+        </ul>
+      </div>
+      <div class="footer__wrapper row-span-1 col-start-2 row-start-4 lg:ml-12">
+        <img src="../src/img/image 4.png" alt="">
+      </div>
+    </div>
+  </footer>
 </body>
+
 </html>
